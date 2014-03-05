@@ -1,0 +1,975 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<!-- 
+/*
+ * Owner: Webster Sailing Association
+ * File: index.html
+*/
+ -->
+<html>
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	
+<title>WSA Calendar</title>
+
+<script src="scripts/actions.js"></script>	
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+ <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+  
+<script type="text/javascript">
+
+	function handleBodyOnLoad()
+	{
+		$('#nav li').hover(
+				function () {
+					//show its submenu
+					
+					$('ul', this).stop().slideDown(100);
+	
+				}, 
+				function () {
+					//hide its submenu
+					
+					$('ul', this).stop().slideUp(100);			
+				}
+			);
+	
+		$("#nav li").click(function() { 
+			$('ul', this).stop().slideUp(100);	
+		  });
+	}
+
+</script>
+
+<style type="text/css">
+
+#contentTable {
+width:100%;
+}
+
+#footerTable {
+width:100%;
+}
+  
+  body {    
+    margin: 0;
+    padding: 0;
+    color: #494949;
+    font-size: 12px;
+    font-family: Verdana,sans-serif;
+}
+  td { 
+    padding: 0;
+    margin:0;
+}
+ @media (max-width: 1025px) {
+  #contentTable {
+width:98%;
+}
+
+#footerTable {
+width:98%;
+}
+}
+  
+</style>
+
+<style type="text/css">
+	
+	/* remove the list style */
+	#nav {
+		margin:0; 
+		padding:0; 
+		list-style:none;
+	}	
+	
+		/* make the LI display inline */
+		/* it's position relative so that position absolute */
+		/* can be used in submenu */
+		#nav li {
+			float:left; 
+			display:block; 
+			width:160px; 
+			background:#983222; 
+			position:relative;
+			z-index:500;
+			text-align:center;
+		}
+		
+		/* this is the parent menu */
+		#nav li a {
+			display:block; 
+			height:23px; 
+			text-decoration:none; 
+			text-align:center; 
+			line-height: 23px;
+			color: #FFFFFF;
+			font-family: Arial,sans-serif;
+			font-size: 14px;
+			font-weight: bold;
+			z-index: 100;
+		}
+
+		#nav li a:hover {
+			background:#FFFFFF;
+			color:#983222;
+		}
+	
+		/* you can make a different style for default selected value */
+		#nav a.selected {
+			color:#983222;
+		}
+		
+		#nav li.selected {
+			background:#FFFFFF;
+			color:#983222;
+		}
+	
+		/* submenu, it's hidden by default */
+		#nav ul {
+			position:absolute; 
+			left:0; 
+			display:none; 
+			padding:0; 
+			list-style:none;
+			border:1px solid #FFFFFF;
+		}
+		
+		#nav ul li {
+			width:130px;
+			float:left; 
+			background:#983222;
+			color:#FFFFFF;
+		}
+		
+		/* display block will make the link fill the whole area of LI */
+		#nav ul a {
+			display:block;  
+			height: auto;
+			color:#fff;
+			text-align:left;
+		}
+		
+		#nav ul a:hover {
+			background:#FFFFFF;
+			color:#983222;
+		}
+
+		/* fix ie6 small issue */
+		/* we should always avoid using hack like this */
+		/* should put it into separate file : ) */
+		html #nav ul {
+			margin:0 0 0 -2px;
+		}
+
+		h1 { margin:0 }
+		h2 { margin:0 }
+	
+	h1, h2, h3, h4, h5, h6 {
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    color:#FFFFFF
+}
+
+a:link, a:visited {
+    color: #027AC6;
+    text-decoration: none;
+}
+
+a:hover {
+  color: #0062A0;
+  text-decoration: underline;
+}
+
+a:active, a.active {
+  color: #5895be;
+}
+
+h1 {
+  font-size: 170%;
+}
+
+h2 {
+  font-size: 160%;
+  line-height: 130%;
+}
+
+h3 {
+  font-size: 140%;
+}
+
+h4 {
+  font-size: 130%;
+}
+
+h5 {
+  font-size: 120%;
+}
+
+h6 {
+  font-size: 110%;
+}
+	</style>
+
+	
+</head>
+<body onLoad="handleBodyOnLoad()">
+ 	
+ 	<table id="contentTable" align="center" style="border-collapse: collapse;">
+	<tr>
+		<td width="100%">
+			<div style="background-color:#c6e3f3;width:100%;height:12px;text-align:center">
+				
+					
+				
+				</div>
+				
+		</td>
+		</tr>
+		<tr>
+		<td width="100%">
+			<div style="width:100%;height:1px;text-align:center">
+				
+					
+				
+				</div>
+				
+		</td>
+		</tr>
+	<tr>
+	<td width="100%" style="padding:0">
+		<div id="logoContentDiv" style="width:100%;height:120px;background-color:#19aeec">
+			
+				<table width="100%" height="100%" valign="middle" align="center" style="border-collapse: collapse">
+												<tr>
+												<td width="20px"></td>
+													<td>
+														
+														<h1>Webster Sailing Association</h1>
+														</td>
+													
+												</tr>
+												
+												</table>
+			
+			</div>
+			
+			
+		</td>
+		</tr>
+		<tr>
+		<td width="100%">
+			<div style="width:100%;height:1px;text-align:center">
+				
+					
+				
+				</div>
+				
+		</td>
+		</tr>
+		<tr>
+		<td width="100%" align="center">
+	
+			
+			<div id="siteContentPane" style="width:100%;">	
+						
+						<div id="contentDivTabHome0_DivContent" style="width:100%; overflow:auto;">
+							<table width="100%" align="center" border=0 cellspacing=0 cellpadding=0>
+								
+								<tr>
+								<td width="100%" valign="top" align="center">
+									<table width="100%" style="border-collapse: collapse;">
+									<tr>
+									<td width="100%" valign="top" align="center">
+									
+										<table width="100%" style="border-collapse: collapse">
+											<tr>
+											<td width="100%" valign="top" align="center">
+												<table width="100%" height="100%" style="border-collapse: collapse;">
+													<tr>
+													<td width="100%" valign="top">
+														<table width="100%" style="border-collapse: collapse;">
+														<tr>
+														<td width="18%" valign="top" align="center" style="background-color:#c6e3f3;color: #FFFFFF;">
+															
+															<table width="100%" style="border-collapse: collapse;">
+															<tr height="20px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td>
+																<h2 style="color: #494949;font-size: 20px">Search</h2>
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="5px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td style="color: #494949;font-size:12px">
+																<b>Search this site:</b>
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="5px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td>
+																<table width="100%" style="border-collapse: collapse;">
+																<tr>
+																<td width="100px" valign="top">
+																<input type="text"/>
+																</td>
+																<td width="60px" valign="middle">
+																<input type="button" value="Search"/>
+																</td>
+																</tr></table>
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="32px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td>
+																<h2 style="color: #494949;font-size: 20px">Navigation</h2>
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="15px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td>
+																<table width="100%" style="border-collapse: collapse;">
+																<tr>
+																<td width="2px"></td>
+																<td width="17px" valign="middle">
+																	<img src="images/leaf.gif" />
+																</td>
+																<td style="font-size:12px">
+																	<a href="index.html">Home</a>
+																</td>
+																</tr></table>
+																
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="11px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td>
+																<table width="100%" style="border-collapse: collapse;">
+																<tr>
+																<td width="2px"></td>
+																<td width="17px" valign="middle">
+																	<img src="images/leaf.gif" />
+																</td>
+																<td style="font-size:12px">
+																	<a href="about-webster-sailing-association.html">About WSA</a>
+																</td>
+																</tr></table>
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="11px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td>
+																<table width="100%" style="border-collapse: collapse;">
+																<tr>
+																<td width="2px"></td>
+																<td width="17px" valign="middle">
+																	<img src="images/leaf.gif" />
+																</td>
+																<td style="font-size:12px">
+																	<a href="calendar.html">Calendar</a>
+																</td>
+																</tr></table>
+																
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="11px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td style="font-size:12px">
+																<table width="100%" style="border-collapse: collapse;">
+																<tr>
+																<td width="2px"></td>
+																<td width="17px" valign="middle">
+																	<img src="images/leaf.gif" />
+																</td>
+																<td style="font-size:12px">
+																	<a href="directions.html">Directions</a>
+																</td>
+																</tr></table>
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="11px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td style="font-size:12px">
+																<table width="100%" style="border-collapse: collapse;">
+																<tr>
+																<td width="2px"></td>
+																<td width="17px" valign="middle">
+																	<img src="images/leaf.gif" />
+																</td>
+																<td style="font-size:12px">
+																	<a href="membership-info.html">Membership Info</a>
+																</td>
+																</tr></table>
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="11px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td style="font-size:12px">
+																<table width="100%" style="border-collapse: collapse;">
+																<tr>
+																<td width="2px"></td>
+																<td width="17px" valign="middle">
+																	<img src="images/leaf.gif" />
+																</td>
+																<td style="font-size:12px">
+																	<a href="racing.html">Racing</a>
+																</td>
+																</tr></table>
+																
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="11px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td style="font-size:12px">
+																<table width="100%" style="border-collapse: collapse;">
+																<tr>
+																<td width="2px"></td>
+																<td width="17px" valign="middle">
+																	<img src="images/leaf.gif" />
+																</td>
+																<td style="font-size:12px">
+																	<a href="contact-webster-sailing-association.html">Contact Us</a>
+																</td>
+																</tr></table>
+																
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="11px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td style="font-size:12px">
+																<table width="100%" style="border-collapse: collapse;">
+																<tr>
+																<td width="2px"></td>
+																<td width="17px" valign="middle">
+																	<img src="images/leaf.gif" />
+																</td>
+																<td style="font-size:12px">
+																	<a href="photo-gallery.html">Photo Gallery</a>
+																</td>
+																</tr></table>
+																
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="11px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td style="font-size:12px">
+																<table width="100%" style="border-collapse: collapse;">
+																<tr>
+																<td width="2px"></td>
+																<td width="17px" valign="middle">
+																	<img src="images/leaf.gif" />
+																</td>
+																<td style="font-size:12px">
+																	<a href="fleets.html">Fleets</a>
+																</td>
+																</tr>
+																</table>
+																
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="11px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td style="font-size:12px">
+																<table width="100%" style="border-collapse: collapse;">
+																<tr>
+																<td width="2px"></td>
+																<td width="17px" valign="middle">
+																	<img src="images/leaf.gif" />
+																</td>
+																<td style="font-size:12px">
+																	<a href="wsa-committees.html">WSA Committees</a>
+																</td>
+																</tr></table>
+																
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="11px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td style="font-size:12px">
+																<table width="100%" style="border-collapse: collapse;">
+																<tr>
+																<td width="2px"></td>
+																<td width="17px" valign="middle">
+																	<img src="images/leaf.gif" />
+																</td>
+																<td style="font-size:12px">
+																	<a href="forms.html">Forms</a>
+																</td>
+																</tr></table>
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="11px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td style="font-size:12px">
+																<table width="100%" style="border-collapse: collapse;">
+																<tr>
+																<td width="2px"></td>
+																<td width="17px" valign="middle">
+																	<img src="images/leaf.gif" />
+																</td>
+																<td style="font-size:12px">
+																	<a href="jibs-and-jabs.html">Jibs & Jabs</a>
+																</td>
+																</tr></table>
+																
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="11px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td style="font-size:12px">
+																<table width="100%" style="border-collapse: collapse;">
+																<tr>
+																<td width="2px"></td>
+																<td width="17px" valign="middle">
+																	<img src="images/leaf.gif" />
+																</td>
+																<td style="font-size:12px">
+																	<a href="classifieds.html">Classifieds</a>
+																</td>
+																</tr></table>
+																
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="11px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="20px"></td>
+															<td style="font-size:12px">
+																<table width="100%" style="border-collapse: collapse;">
+																<tr>
+																<td width="2px"></td>
+																<td width="17px" valign="middle">
+																	<img src="images/leaf.gif" />
+																</td>
+																<td style="font-size:12px">
+																	<a href="links.html">Links</a>
+																</td>
+																</tr></table>
+																
+															</td>
+															<td width="20px"></td>
+															</tr>
+															<tr height="5px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															
+															</table>
+														</td>
+														<td width="64%" valign="top" style="color: #FFFFFF;">
+															
+															<table width="100%" style="border-collapse: collapse;">
+															<tr height="20px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="26px"></td>
+															<td>
+																<table width="100%" style="border-collapse: collapse;">
+																<tr>
+																<td width="50%">
+																	<h2 style="color: #494949;font-size: 20px">Calendar</h2>
+																</td>
+																<td width="50%" align="right" valign="middle" style="font-size:14px">
+																	<a href="forms/WSAEventCalendar_2014.docx" target="_blank">Printable Calendar</a>
+																</td>
+																</tr></table>
+																
+															</td>
+															<td width="26px"></td>
+															</tr>
+															<tr height="12px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="26px"></td>
+															<td style="font-size:12px">
+																
+																<table width="100%" style="font-size:12px;border-collapse: collapse;">
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:1px;border-bottom:1px solid #c6e3f3;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:12px;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td width="125px">
+																		<h2 style="color: #494949;font-size: 18px">March</h2>
+																	</td>
+																	<td>
+																	<u>3/1 (Saturday)</u><br/><i>DUES DUE FOR RENEWING MEMBERS TO LEE AMODEO SECRETARY<br/><b>PENALTY ENFORCED FOR LATE PAYMENT</b></i><br/><br/>
+																	<u>3/29 (Saturday)</u><br/><i>OPENING WORK PARTY DOCKS IN; GROUNDS CLEAN-UP,REPAIRS BRING TOOLS, GLOVES & RAKES <b>RAIN DATE SAT 4/5</b><br/><b>GATE LOCK CHANGED: NEW COMBO SENT ON MEMBERSHIP CARD</b></i> 
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:12px;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:1px;border-bottom:1px solid #c6e3f3;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:12px;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td width="125px">
+																		<h2 style="color: #494949;font-size: 18px">April</h2>
+																	</td>
+																	<td>
+																	<u>4/1 (Tuesday)</u><br/><i>W.S.A. PROPERTY OPEN FOR MEMBER USE & BOAT STORAGE PARKING REGISTRATION DUE TO ROGER LIVINGSTON</i><br/><br/>
+																	<u>4/26 (Saturday)</u><br/><i>SPRING BANQUET/BUSINESS MEETING  POINT BREEZE RESTAURANT 5PM COCKTAILS, 6PM DINNER, 7PM BUSINESS MEETING</i> 
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:12px;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:1px;border-bottom:1px solid #c6e3f3;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:12px;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td width="125px">
+																		<h2 style="color: #494949;font-size: 18px">June</h2>
+																	</td>
+																	<td>
+																	<u>6/1 (Sunday)</u><br/><i>1st. POINT SCORE RACE 2:00 PM START</i><br/><br/>
+																	<u>6/8 (Sunday)</u><br/><i>2nd. POINT SCORE RACE 2:00 PM START</i><br/><br/>
+																	<u>6/21 (Saturday)</u><br/><i>RACING CLINIC  2nd SUNSET/FULL MOON SAIL TOGETHER</i><br/><br/>
+																	<u>6/22 (Sunday)</u><br/><i>3RD POINT SCORE RACE</i><br/><br/>
+																	<u>6/29 (Sunday)</u><br/><i>JULY 4TH TROPHY RACE (ONE RACE)<br/><b>FRIENDS & FAMILY DAY</b> (ALL MEMBERS) HOSTS: PROGRAM COMM 4-5 APPETIZERS & LAKE TOURS   5:00 PM COOKOUT  BYOB</i> 
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:12px;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:1px;border-bottom:1px solid #c6e3f3;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:12px;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td width="125px">
+																		<h2 style="color: #494949;font-size: 18px">July</h2>
+																	</td>
+																	<td>
+																	<u>7/4 (Friday)</u><br/><i>WEBSTER FIREWORKS DISPLAY MEMORIAL BEACH</i><br/><br/>
+																	<u>7/6 (Sunday)</u><br/><i>4TH POINT SCORE RACE 2:00 PM START</i><br/><br/>
+																	<u>7/13 (Sunday)</u><br/><i>5TH POINT SCORE RACE 2:00 PM START</i><br/><br/>
+																	<u>7/20 (Sunday)</u><br/><i>6TH POINT SCORE RACE 2:00 PM START<br/>2nd SUNSET/FULL MOON SAIL TOGETHER</i><br/><br/> 
+																	<u>7/27 (Sunday)</u><br/><i>CRAVER MEMORIAL TROPHY RACE (ONE RACE) 2:00 PM START</i> 
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:12px;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:1px;border-bottom:1px solid #c6e3f3;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:12px;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td width="125px">
+																		<h2 style="color: #494949;font-size: 18px">August</h2>
+																	</td>
+																	<td>
+																	<u>8/2 (Saturday)</u><br/><i>SUNFISH REGATTA  OPEN RACES & COOKOUT TO FOLLOW<br/>NUMBER OF RACES TO BE DETERMINED BY RACE COMMITTEE<br/>PREREGISTRATION FOR NON-MEMBERS ON WEBSITE</i><br/><br/>
+																	<u>8/3 (Sunday)</u><br/><i>7th POINT SCORE RACE 2:00 PM START</i><br/><br/>
+																	<u>8/10 (Sunday)</u><br/><i>8th POINT SCORE RACE 2:00 PM START</i><br/><br/>
+																	<u>8/17 (Sunday)</u><br/><i>9th. POINT SCORE RACE 2:00 PM START 3RD FULL MOON SAIL SUNSET<br/>3RD SUNSET/FULL MOON SAIL</i><br/><br/> 
+																	<u>8/24 (Sunday)</u><br/><i>PHIL NUMS MEMORIAL TROPHY RACE (ONE RACE)</i><br/><br/> 
+																	<u>8/31 (Sunday)</u><br/><i>POINT BREEZE TROPHY RACE-POINT BREEZE RESTAURANT<br/>9:30AM REGISTRATION-10:00 SKIPPERS MTG-DINNER 5:00 PM<br/>AWARDS FOLLOW DINNER</i>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:12px;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:1px;border-bottom:1px solid #c6e3f3;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:12px;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td width="125px">
+																		<h2 style="color: #494949;font-size: 18px">September</h2>
+																	</td>
+																	<td>
+																	<u>9/7 (Sunday)</u><br/><i>FALL POTLUCK BANQUET & BUSINESS MEETING AT THE ANCHORAGE<br/>PLEASE BRING MAIN DISH & SALAD/DESSERT APPITEZER TO SHARE<br/>POTLUCK BANQUET  5:00   MEETING & TROPHIES AROUND 6:00</i><br/><br/>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:12px;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:1px;border-bottom:1px solid #c6e3f3;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:12px;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td width="125px">
+																		<h2 style="color: #494949;font-size: 18px">November</h2>
+																	</td>
+																	<td>
+																	<u>11/1 (Saturday)</u><br/><i>CLOSING WORK PARTY  DOCKS IN; GROUNDS CLEAN UP</i><br/><br/>
+																	<u>11/30 (Sunday)</u><br/><i>W.S.A. CLOSED FOR SEASON  ALL BOATS; & DINGHIES; MUST BE REMOVED</i><br/><br/>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2>
+																		<div style="width:100%;height:48px;"></div>
+																	</td>
+																	</tr>
+																	<tr>
+																	<td colspan=2 style="font-size:12px">
+																		
+																		NOTE: THE RACE COMMITTEE WILL ALLOW ADDITIONAL DROP RACES FOR THE POINT SCORE RACES.  THIS WILL ALLOW YOU TO SELECT THE SUNDAYS THAT YOU WISH TO RACE.  FAIR WINDS!
+																		
+																	</td>
+																	</tr>
+																	</table>
+															
+															</td>
+															<td width="26px"></td>
+															</tr>
+															<tr height="90px">
+															<td colspan=3>
+																
+															</td>
+															</tr>
+															</table>
+															
+														</td>
+														<td width="18%" valign="top" style="background-color:#c6e3f3;color: #FFFFFF;">
+														
+															<table width="100%" style="font-size:12px;border-collapse: collapse;border:1px solid #c6e3f3;">
+															<tr height="20px">
+															<td width="100%">
+																
+															</td>
+															</tr>
+															<tr>
+															<td width="100%" align="center">
+																<div style='width: 120px; height: 60px; background-image: url( http://vortex.accuweather.com/adcbin/netweather_v2/backgrounds/blue_120x60_bg.jpg ); background-repeat: no-repeat; background-color: #346797;' ><div id='NetweatherContainer' style='height: 48px;' ><script src='http://netweather.accuweather.com/adcbin/netweather_v2/netweatherV2ex.asp?partner=netweather&tStyle=whteYell&logo=0&zipcode=01570&lang=eng&size=7&theme=blue&metric=0&target=_self'></script></div><div style='text-align: center; font-family: arial, helvetica, verdana, sans-serif; font-size: 10px; line-height: 12px; color: #FFFFFF;' ><a style='color: #FFFFFF' href='http://www.accuweather.com/en/us/webster-ma/01570/weather-forecast/338687' target="blank">Weather Forecast</a></div></div>
+
+															</td>
+															</tr>
+															</table>
+														
+														</td>
+														</tr>
+														</table>
+													</td>
+													</tr>
+													
+												</table>
+											</td>
+											</tr>
+											
+											</table>
+									
+									</td>
+									</tr>
+									</table>
+								</td>
+								</tr>
+								
+								
+							</table>
+							</div>
+	
+						
+			</div>
+			<div id="logoSpacerDiv4" style="width:100%;height:1px;border-bottom:1px solid #c6e3f3;"></div>
+			<div id="logoSpacerDiv6" style="width:100%;height:15px;"></div>
+			<div style="width:100%;">
+			
+				<table width="100%" style="border-collapse: collapse">
+				<tr>
+				<td width="50%" align="center">
+					<table width="90%" style="border-collapse: collapse">
+					<tr>
+						<td width="33%"><span style="font-size:12px;font-family:Georgia"><a data-role="none" href="privacy-policy.html">Privacy Policy</a></span></td>
+						<td width="33%"><span style="font-size:12px;font-family:Georgia"><a data-role="none" href="terms.html">Terms and Conditions</a></span></td>
+						<td width="33%"></td>
+					</tr>
+					</table>
+				</td>
+				<td width="50%" align="center">
+					<table width="90%" style="border-collapse: collapse">
+					<tr>
+						<td width="100%" align="right"><span style="font-size:12px;font-family:Georgia">Copyright 2014.  wsasail.org.</span></td>
+					</tr>
+					</table>
+				</td>
+				</tr>
+				</table>
+			
+			</div>
+			<div id="logoSpacerDiv6" style="width:100%;height:30px;"></div>
+			
+		</td>
+		</tr>
+		</table>
+		
+  		
+	</body>
+</html>
